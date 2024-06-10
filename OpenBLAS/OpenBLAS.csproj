@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>OpenBLAS</RootNamespace>
+    <AssemblyName>OpenBLAS</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MathNet.Numerics" Version="6.0.0-beta1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.Analyzers" Version="4.12.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.12.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NetEscapades.EnumGenerators" Version="1.0.0-beta09">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="*.csproj.DotSettings" />
+    <Compile Update="PInvoke\OpenBlas.*.cs">
+      <DependentUpon>OpenBlas.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BLAS.*.cs">
+      <DependentUpon>BLAS.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\GeneralMatrix.Double.cs">
+      <DependentUpon>GeneralMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\GeneralMatrix.Float.cs">
+      <DependentUpon>GeneralMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\GeneralMatrix.Complex.cs">
+      <DependentUpon>GeneralMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\GeneralMatrix.ComplexFloat.cs">
+      <DependentUpon>GeneralMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\SymmetricMatrix.Complex.cs">
+      <DependentUpon>SymmetricMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\SymmetricMatrix.ComplexFloat.cs">
+      <DependentUpon>SymmetricMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\SymmetricMatrix.Double.cs">
+      <DependentUpon>SymmetricMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\SymmetricMatrix.Float.cs">
+      <DependentUpon>SymmetricMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\GeneralBandMatrix.Complex.cs">
+      <DependentUpon>GeneralBandMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\GeneralBandMatrix.ComplexFloat.cs">
+      <DependentUpon>GeneralBandMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\GeneralBandMatrix.Double.cs">
+      <DependentUpon>GeneralBandMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\GeneralBandMatrix.Float.cs">
+      <DependentUpon>GeneralBandMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\TriangularMatrix.Complex.cs">
+      <DependentUpon>TriangularMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\TriangularMatrix.ComplexFloat.cs">
+      <DependentUpon>TriangularMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\TriangularMatrix.Double.cs">
+      <DependentUpon>TriangularMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Conversions\TriangularMatrix.Float.cs">
+      <DependentUpon>TriangularMatrix.cs</DependentUpon>
+    </Compile>
+    <None Update="libopenblas.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
