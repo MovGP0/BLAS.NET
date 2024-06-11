@@ -37,7 +37,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="info">Pointer to the output info parameter.</param>
     /// <returns>Returns an integer indicating the success of the operation.</returns>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl , EntryPoint = "cpotrf")]
-    internal static extern int C_po_trf(sbyte* uplo, int* n, float* a, int* lda, int* info);
+    internal static extern int C_po_trf(sbyte* uplo, int* n, ComplexFloat* a, int* lda, int* info);
 
     /// <summary>
     /// Computes the Cholesky factorization of a complex double-precision matrix using a block algorithm.
@@ -49,5 +49,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="info">Pointer to the output info parameter.</param>
     /// <returns>Returns an integer indicating the success of the operation.</returns>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl , EntryPoint = "zpotrf")]
-    internal static extern int Z_po_trf(sbyte* uplo, int* n, double* a, int* lda, int* info);
+    internal static extern int Z_po_trf(sbyte* uplo, int* n, ComplexDouble* a, int* lda, int* info);
 }

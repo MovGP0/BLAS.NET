@@ -16,7 +16,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="c">Pointer to the single-precision complex Hermitian matrix C.</param>
     /// <param name="ldc">Pointer to the leading dimension of the matrix C.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cherk")]
-    internal static extern void Cherk(sbyte* uplo, sbyte* trans, int* n, int* k, float* alpha, float* a, int* lda, float* beta, float* c, int* ldc);
+    internal static extern void Cherk(sbyte* uplo, sbyte* trans, int* n, int* k, ComplexFloat* alpha, ComplexFloat* a, int* lda, ComplexFloat* beta, ComplexFloat* c, int* ldc);
 
     /// <summary>
     /// Performs the Hermitian rank-k update C = alpha * A * A' + beta * C for double-precision complex Hermitian matrices.
@@ -32,5 +32,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="c">Pointer to the double-precision complex Hermitian matrix C.</param>
     /// <param name="ldc">Pointer to the leading dimension of the matrix C.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zherk")]
-    internal static extern void Zherk(sbyte* uplo, sbyte* trans, int* n, int* k, double* alpha, double* a, int* lda, double* beta, double* c, int* ldc);
+    internal static extern void Zherk(sbyte* uplo, sbyte* trans, int* n, int* k, ComplexDouble* alpha, ComplexDouble* a, int* lda, ComplexDouble* beta, ComplexDouble* c, int* ldc);
 }

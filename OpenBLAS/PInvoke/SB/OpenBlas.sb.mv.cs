@@ -51,7 +51,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="y">Pointer to the single-precision complex vector y.</param>
     /// <param name="incY">Pointer to the increment for the elements of y.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "csbmv")]
-    internal static extern void C_sb_mv(sbyte* uplo, int* n, int* k, float* alpha, float* a, int* lda, float* x, int* incX, float* beta, float* y, int* incY);
+    internal static extern void C_sb_mv(sbyte* uplo, int* n, int* k, ComplexFloat* alpha, ComplexFloat* a, int* lda, ComplexFloat* x, int* incX, ComplexFloat* beta, ComplexFloat* y, int* incY);
 
     /// <summary>
     /// Perform the operation y = alpha * A * x + beta * y for a double-precision complex symmetric band matrix.
@@ -68,5 +68,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="y">Pointer to the double-precision complex vector y.</param>
     /// <param name="incY">Pointer to the increment for the elements of y.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zsbmv")]
-    internal static extern void Z_sb_mv(sbyte* uplo, int* n, int* k, double* alpha, double* a, int* lda, double* x, int* incX, double* beta, double* y, int* incY);
+    internal static extern void Z_sb_mv(sbyte* uplo, int* n, int* k, ComplexDouble* alpha, ComplexDouble* a, int* lda, ComplexDouble* x, int* incX, ComplexDouble* beta, ComplexDouble* y, int* incY);
 }

@@ -15,7 +15,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="y">Pointer to the single-precision complex vector y.</param>
     /// <param name="incY">Pointer to the increment for the elements of y.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "chpmv")]
-    internal static extern void Chpmv(sbyte* uplo, int* n, float* alpha, float* ap, float* x, int* incX, float* beta, float* y, int* incY);
+    internal static extern void Chpmv(sbyte* uplo, int* n, ComplexFloat* alpha, ComplexFloat* ap, ComplexFloat* x, int* incX, ComplexFloat* beta, ComplexFloat* y, int* incY);
 
     /// <summary>
     /// Performs the matrix-vector operation y = alpha * A * x + beta * y for double-precision complex Hermitian packed matrices.
@@ -30,5 +30,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="y">Pointer to the double-precision complex vector y.</param>
     /// <param name="incY">Pointer to the increment for the elements of y.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zhpmv")]
-    internal static extern void Zhpmv(sbyte* uplo, int* n, double* alpha, double* ap, double* x, int* incX, double* beta, double* y, int* incY);
+    internal static extern void Zhpmv(sbyte* uplo, int* n, ComplexDouble* alpha, ComplexDouble* ap, ComplexDouble* x, int* incX, ComplexDouble* beta, ComplexDouble* y, int* incY);
 }

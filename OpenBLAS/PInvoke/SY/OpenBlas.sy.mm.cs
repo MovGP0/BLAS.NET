@@ -54,7 +54,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="c">Pointer to the matrix C.</param>
     /// <param name="ldc">Pointer to an integer specifying the leading dimension of matrix C.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "csymm")]
-    internal static extern void Csymm(sbyte* side, sbyte* uplo, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+    internal static extern void Csymm(sbyte* side, sbyte* uplo, int* m, int* n, ComplexFloat* alpha, ComplexFloat* a, int* lda, ComplexFloat* b, int* ldb, ComplexFloat* beta, ComplexFloat* c, int* ldc);
 
     /// <summary>
     /// Performs a symmetric matrix-matrix operation using double-precision complex numbers.
@@ -72,5 +72,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="c">Pointer to the matrix C.</param>
     /// <param name="ldc">Pointer to an integer specifying the leading dimension of matrix C.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zsymm")]
-    internal static extern void Zsymm(sbyte* side, sbyte* uplo, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+    internal static extern void Zsymm(sbyte* side, sbyte* uplo, int* m, int* n, ComplexDouble* alpha, ComplexDouble* a, int* lda, ComplexDouble* b, int* ldb, ComplexDouble* beta, ComplexDouble* c, int* ldc);
 }

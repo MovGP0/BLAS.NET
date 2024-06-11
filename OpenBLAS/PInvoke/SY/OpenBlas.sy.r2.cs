@@ -45,7 +45,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="a">Pointer to the matrix to be updated.</param>
     /// <param name="lda">Pointer to the leading dimension of the matrix.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "csyr2")]
-    internal static extern void Csyr2(sbyte* uplo, int* n, float* alpha, float* x, int* incX, float* y, int* incY, float* a, int* lda);
+    internal static extern void Csyr2(sbyte* uplo, int* n, ComplexFloat* alpha, ComplexFloat* x, int* incX, ComplexFloat* y, int* incY, ComplexFloat* a, int* lda);
 
     /// <summary>
     /// Performs the symmetric rank-2 update of a complex double-precision matrix.
@@ -60,5 +60,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="a">Pointer to the matrix to be updated.</param>
     /// <param name="lda">Pointer to the leading dimension of the matrix.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zsyr2")]
-    internal static extern void Zsyr2(sbyte* uplo, int* n, double* alpha, double* x, int* incX, double* y, int* incY, double* a, int* lda);
+    internal static extern void Zsyr2(sbyte* uplo, int* n, ComplexDouble* alpha, ComplexDouble* x, int* incX, ComplexDouble* y, int* incY, ComplexDouble* a, int* lda);
 }

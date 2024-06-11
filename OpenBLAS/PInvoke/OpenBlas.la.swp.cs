@@ -43,7 +43,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="incX">Pointer to the increment between successive values of ipiv.</param>
     /// <returns>Status code of the operation.</returns>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "claswp")]
-    internal static extern int C_la_swp(int* n, float* a, int* lda, int* k1, int* k2, int* ipiv, int* incX);
+    internal static extern int C_la_swp(int* n, ComplexFloat* a, int* lda, int* k1, int* k2, int* ipiv, int* incX);
 
     /// <summary>
     /// Performs a series of row interchanges on the matrix A with double-precision complex numbers.
@@ -57,5 +57,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="incX">Pointer to the increment between successive values of ipiv.</param>
     /// <returns>Status code of the operation.</returns>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zlaswp")]
-    internal static extern int Z_la_swp(int* n, double* a, int* lda, int* k1, int* k2, int* ipiv, int* incX);
+    internal static extern int Z_la_swp(int* n, ComplexDouble* a, int* lda, int* k1, int* k2, int* ipiv, int* incX);
 }

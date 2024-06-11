@@ -3,12 +3,13 @@
 internal static unsafe partial class OpenBlas
 {
     /// <summary>
-    /// Perform the operation C = alpha * A * B + beta * C for single-precision symmetric matrices.
+    /// Perform a general matrix-matrix multiplication for single-precision matrices with an additional transpose option.
     /// </summary>
     /// <param name="transA">Pointer to the transpose operation flag for matrix A.</param>
     /// <param name="transB">Pointer to the transpose operation flag for matrix B.</param>
-    /// <param name="m">Pointer to the number of rows of matrix A and C.</param>
-    /// <param name="n">Pointer to the number of columns of matrix B and C.</param>
+    /// <param name="transC">Pointer to the transpose operation flag for matrix C.</param>
+    /// <param name="m">Pointer to the number of rows of matrix C and op(A).</param>
+    /// <param name="n">Pointer to the number of columns of matrix C and op(B).</param>
     /// <param name="alpha">Pointer to the single-precision scalar alpha.</param>
     /// <param name="a">Pointer to the single-precision matrix A.</param>
     /// <param name="lda">Pointer to the leading dimension of matrix A.</param>
@@ -17,16 +18,17 @@ internal static unsafe partial class OpenBlas
     /// <param name="beta">Pointer to the single-precision scalar beta.</param>
     /// <param name="c">Pointer to the single-precision matrix C.</param>
     /// <param name="ldc">Pointer to the leading dimension of matrix C.</param>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "sgems")]
-    internal static extern int Sgems(sbyte* transA, sbyte* transB, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "sge2mm")]
+    internal static extern int Sge2mm(sbyte* transA, sbyte* transB, sbyte* transC, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
 
     /// <summary>
-    /// Perform the operation C = alpha * A * B + beta * C for double-precision symmetric matrices.
+    /// Perform a general matrix-matrix multiplication for double-precision matrices with an additional transpose option.
     /// </summary>
     /// <param name="transA">Pointer to the transpose operation flag for matrix A.</param>
     /// <param name="transB">Pointer to the transpose operation flag for matrix B.</param>
-    /// <param name="m">Pointer to the number of rows of matrix A and C.</param>
-    /// <param name="n">Pointer to the number of columns of matrix B and C.</param>
+    /// <param name="transC">Pointer to the transpose operation flag for matrix C.</param>
+    /// <param name="m">Pointer to the number of rows of matrix C and op(A).</param>
+    /// <param name="n">Pointer to the number of columns of matrix C and op(B).</param>
     /// <param name="alpha">Pointer to the double-precision scalar alpha.</param>
     /// <param name="a">Pointer to the double-precision matrix A.</param>
     /// <param name="lda">Pointer to the leading dimension of matrix A.</param>
@@ -35,16 +37,17 @@ internal static unsafe partial class OpenBlas
     /// <param name="beta">Pointer to the double-precision scalar beta.</param>
     /// <param name="c">Pointer to the double-precision matrix C.</param>
     /// <param name="ldc">Pointer to the leading dimension of matrix C.</param>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dgems")]
-    internal static extern int Dgems(sbyte* transA, sbyte* transB, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dge2mm")]
+    internal static extern int Dge2mm(sbyte* transA, sbyte* transB, sbyte* transC, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
 
     /// <summary>
-    /// Perform the operation C = alpha * A * B + beta * C for single-precision complex symmetric matrices.
+    /// Perform a general matrix-matrix multiplication for single-precision complex matrices with an additional transpose option.
     /// </summary>
     /// <param name="transA">Pointer to the transpose operation flag for matrix A.</param>
     /// <param name="transB">Pointer to the transpose operation flag for matrix B.</param>
-    /// <param name="m">Pointer to the number of rows of matrix A and C.</param>
-    /// <param name="n">Pointer to the number of columns of matrix B and C.</param>
+    /// <param name="transC">Pointer to the transpose operation flag for matrix C.</param>
+    /// <param name="m">Pointer to the number of rows of matrix C and op(A).</param>
+    /// <param name="n">Pointer to the number of columns of matrix C and op(B).</param>
     /// <param name="alpha">Pointer to the single-precision complex scalar alpha.</param>
     /// <param name="a">Pointer to the single-precision complex matrix A.</param>
     /// <param name="lda">Pointer to the leading dimension of matrix A.</param>
@@ -53,16 +56,17 @@ internal static unsafe partial class OpenBlas
     /// <param name="beta">Pointer to the single-precision complex scalar beta.</param>
     /// <param name="c">Pointer to the single-precision complex matrix C.</param>
     /// <param name="ldc">Pointer to the leading dimension of matrix C.</param>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cgems")]
-    internal static extern int Cgems(sbyte* transA, sbyte* transB, int* m, int* n, ComplexFloat* alpha, ComplexFloat* a, int* lda, ComplexFloat* b, int* ldb, ComplexFloat* beta, ComplexFloat* c, int* ldc);
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cge2mm")]
+    internal static extern int Cge2mm(sbyte* transA, sbyte* transB, sbyte* transC, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
 
     /// <summary>
-    /// Perform the operation C = alpha * A * B + beta * C for double-precision complex symmetric matrices.
+    /// Perform a general matrix-matrix multiplication for double-precision complex matrices with an additional transpose option.
     /// </summary>
     /// <param name="transA">Pointer to the transpose operation flag for matrix A.</param>
     /// <param name="transB">Pointer to the transpose operation flag for matrix B.</param>
-    /// <param name="m">Pointer to the number of rows of matrix A and C.</param>
-    /// <param name="n">Pointer to the number of columns of matrix B and C.</param>
+    /// <param name="transC">Pointer to the transpose operation flag for matrix C.</param>
+    /// <param name="m">Pointer to the number of rows of matrix C and op(A).</param>
+    /// <param name="n">Pointer to the number of columns of matrix C and op(B).</param>
     /// <param name="alpha">Pointer to the double-precision complex scalar alpha.</param>
     /// <param name="a">Pointer to the double-precision complex matrix A.</param>
     /// <param name="lda">Pointer to the leading dimension of matrix A.</param>
@@ -71,6 +75,6 @@ internal static unsafe partial class OpenBlas
     /// <param name="beta">Pointer to the double-precision complex scalar beta.</param>
     /// <param name="c">Pointer to the double-precision complex matrix C.</param>
     /// <param name="ldc">Pointer to the leading dimension of matrix C.</param>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zgems")]
-    internal static extern int Zgems(sbyte* transA, sbyte* transB, int* m, int* n, ComplexDouble* alpha, ComplexDouble* a, int* lda, ComplexDouble* b, int* ldb, ComplexDouble* beta, ComplexDouble* c, int* ldc);
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zge2mm")]
+    internal static extern int Zge2mm(sbyte* transA, sbyte* transB, sbyte* transC, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
 }

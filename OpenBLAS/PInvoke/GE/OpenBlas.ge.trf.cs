@@ -39,7 +39,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="info">Pointer to the output information. If info = 0, the execution is successful. If info &gt; 0, U(info,info) is exactly zero. The factorization has been completed, but the factor U is exactly singular, and division by zero will occur if it is used to solve a system of equations.</param>
     /// <returns>Returns 0 if the execution is successful, or a positive integer if the factor U is exactly singular.</returns>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cgetrf")]
-    internal static extern int Cgetrf(int* m, int* n, float* a, int* lda, int* ipiv, int* info);
+    internal static extern int Cgetrf(int* m, int* n, ComplexFloat* a, int* lda, int* ipiv, int* info);
 
     /// <summary>
     /// Computes an LU factorization of a general double-precision complex matrix using partial pivoting with row interchanges.
@@ -52,5 +52,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="info">Pointer to the output information. If info = 0, the execution is successful. If info &gt; 0, U(info,info) is exactly zero. The factorization has been completed, but the factor U is exactly singular, and division by zero will occur if it is used to solve a system of equations.</param>
     /// <returns>Returns 0 if the execution is successful, or a positive integer if the factor U is exactly singular.</returns>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zgetrf")]
-    internal static extern int Zgetrf(int* m, int* n, double* a, int* lda, int* ipiv, int* info);
+    internal static extern int Zgetrf(int* m, int* n, ComplexDouble* a, int* lda, int* ipiv, int* info);
 }

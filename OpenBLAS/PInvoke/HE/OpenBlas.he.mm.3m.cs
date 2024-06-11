@@ -3,7 +3,7 @@
 internal static unsafe partial class OpenBlas
 {
     /// <summary>
-    /// Performs the matrix-matrix operation C = alpha * A * B + beta * C for single-precision complex Hermitian matrices.
+    /// Performs the matrix-matrix operation C = alpha * A * B + beta * C using an alternative algorithm for single-precision complex Hermitian matrices.
     /// </summary>
     /// <param name="side">Pointer to the flag indicating whether A multiplies B from the left or right ('L' for left, 'R' for right).</param>
     /// <param name="uplo">Pointer to the flag indicating whether the upper or lower triangular part of the Hermitian matrix A is used ('U' for upper, 'L' for lower).</param>
@@ -17,11 +17,11 @@ internal static unsafe partial class OpenBlas
     /// <param name="beta">Pointer to the single-precision complex scalar beta.</param>
     /// <param name="c">Pointer to the single-precision complex matrix C.</param>
     /// <param name="ldc">Pointer to the leading dimension of the matrix C.</param>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "chemm")]
-    internal static extern void Chemm(sbyte* side, sbyte* uplo, int* m, int* n, ComplexFloat* alpha, ComplexFloat* a, int* lda, ComplexFloat* b, int* ldb, ComplexFloat* beta, ComplexFloat* c, int* ldc);
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "chemm3m")]
+    internal static extern void Chemm3m(sbyte* side, sbyte* uplo, int* m, int* n, ComplexFloat* alpha, ComplexFloat* a, int* lda, ComplexFloat* b, int* ldb, ComplexFloat* beta, ComplexFloat* c, int* ldc);
 
     /// <summary>
-    /// Performs the matrix-matrix operation C = alpha * A * B + beta * C for double-precision complex Hermitian matrices.
+    /// Performs the matrix-matrix operation C = alpha * A * B + beta * C using an alternative algorithm for double-precision complex Hermitian matrices.
     /// </summary>
     /// <param name="side">Pointer to the flag indicating whether A multiplies B from the left or right ('L' for left, 'R' for right).</param>
     /// <param name="uplo">Pointer to the flag indicating whether the upper or lower triangular part of the Hermitian matrix A is used ('U' for upper, 'L' for lower).</param>
@@ -35,6 +35,6 @@ internal static unsafe partial class OpenBlas
     /// <param name="beta">Pointer to the double-precision complex scalar beta.</param>
     /// <param name="c">Pointer to the double-precision complex matrix C.</param>
     /// <param name="ldc">Pointer to the leading dimension of the matrix C.</param>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zhemm")]
-    internal static extern void Zhemm(sbyte* side, sbyte* uplo, int* m, int* n, ComplexDouble* alpha, ComplexDouble* a, int* lda, ComplexDouble* b, int* ldb, ComplexDouble* beta, ComplexDouble* c, int* ldc);
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zhemm3m")]
+    internal static extern void Zhemm3m(sbyte* side, sbyte* uplo, int* m, int* n, ComplexDouble* alpha, ComplexDouble* a, int* lda, ComplexDouble* b, int* ldb, ComplexDouble* beta, ComplexDouble* c, int* ldc);
 }

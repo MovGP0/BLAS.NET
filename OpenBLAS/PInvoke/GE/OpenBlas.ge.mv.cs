@@ -51,7 +51,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="y">Pointer to the single-precision complex vector y.</param>
     /// <param name="incY">Pointer to the increment for the elements of y.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cgemv")]
-    internal static extern void Cgemv(sbyte* trans, int* m, int* n, float* alpha, float* a, int* lda, float* x, int* incX, float* beta, float* y, int* incY);
+    internal static extern void Cgemv(sbyte* trans, int* m, int* n, ComplexFloat* alpha, ComplexFloat* a, int* lda, ComplexFloat* x, int* incX, ComplexFloat* beta, ComplexFloat* y, int* incY);
 
     /// <summary>
     /// Perform the matrix-vector operation y = alpha * op(A) * x + beta * y for double-precision complex matrices.
@@ -68,5 +68,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="y">Pointer to the double-precision complex vector y.</param>
     /// <param name="incY">Pointer to the increment for the elements of y.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zgemv")]
-    internal static extern void Zgemv(sbyte* trans, int* m, int* n, double* alpha, double* a, int* lda, double* x, int* incX, double* beta, double* y, int* incY);
+    internal static extern void Zgemv(sbyte* trans, int* m, int* n, ComplexDouble* alpha, ComplexDouble* a, int* lda, ComplexDouble* x, int* incX, ComplexDouble* beta, ComplexDouble* y, int* incY);
 }

@@ -54,7 +54,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="c">Pointer to the single-precision complex matrix C.</param>
     /// <param name="ldc">Pointer to the leading dimension of matrix C.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cgema")]
-    internal static extern int Cgema(sbyte* transA, sbyte* transB, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+    internal static extern int Cgema(sbyte* transA, sbyte* transB, int* m, int* n, ComplexFloat* alpha, ComplexFloat* a, int* lda, ComplexFloat* b, int* ldb, ComplexFloat* beta, ComplexFloat* c, int* ldc);
 
     /// <summary>
     /// Perform the operation C = alpha * A * B + beta * C for double-precision complex matrices with an additional transpose option.
@@ -72,5 +72,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="c">Pointer to the double-precision complex matrix C.</param>
     /// <param name="ldc">Pointer to the leading dimension of matrix C.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zgema")]
-    internal static extern int Zgema(sbyte* transA, sbyte* transB, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+    internal static extern int Zgema(sbyte* transA, sbyte* transB, int* m, int* n, ComplexDouble* alpha, ComplexDouble* a, int* lda, ComplexDouble* b, int* ldb, ComplexDouble* beta, ComplexDouble* c, int* ldc);
 }

@@ -15,7 +15,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="ldb">Pointer to the leading dimension of the right-hand side matrix.</param>
     /// <param name="info">Pointer to the output info parameter.</param>
     /// <returns>Returns an integer indicating the success of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl , EntryPoint = "spotrs")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "spotrs")]
     internal static extern int S_po_trs(sbyte* uplo, int* n, int* nrhs, float* a, int* lda, float* b, int* ldb, int* info);
 
     /// <summary>
@@ -30,7 +30,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="ldb">Pointer to the leading dimension of the right-hand side matrix.</param>
     /// <param name="info">Pointer to the output info parameter.</param>
     /// <returns>Returns an integer indicating the success of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl , EntryPoint = "dpotrs")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dpotrs")]
     internal static extern int D_po_trs(sbyte* uplo, int* n, int* nrhs, double* a, int* lda, double* b, int* ldb, int* info);
 
     /// <summary>
@@ -45,8 +45,8 @@ internal static unsafe partial class OpenBlas
     /// <param name="ldb">Pointer to the leading dimension of the right-hand side matrix.</param>
     /// <param name="info">Pointer to the output info parameter.</param>
     /// <returns>Returns an integer indicating the success of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl , EntryPoint = "cpotrs")]
-    internal static extern int C_po_trs(sbyte* uplo, int* n, int* nrhs, float* a, int* lda, float* b, int* ldb, int* info);
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cpotrs")]
+    internal static extern int C_po_trs(sbyte* uplo, int* n, int* nrhs, ComplexFloat* a, int* lda, ComplexFloat* b, int* ldb, int* info);
 
     /// <summary>
     /// Solves a system of linear equations with a double-precision complex symmetric positive-definite matrix using the Cholesky factorization.
@@ -60,6 +60,6 @@ internal static unsafe partial class OpenBlas
     /// <param name="ldb">Pointer to the leading dimension of the right-hand side matrix.</param>
     /// <param name="info">Pointer to the output info parameter.</param>
     /// <returns>Returns an integer indicating the success of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl , EntryPoint = "zpotrs")]
-    internal static extern int Z_po_trs(sbyte* uplo, int* n, int* nrhs, double* a, int* lda, double* b, int* ldb, int* info);
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zpotrs")]
+    internal static extern int Z_po_trs(sbyte* uplo, int* n, int* nrhs, ComplexDouble* a, int* lda, ComplexDouble* b, int* ldb, int* info);
 }

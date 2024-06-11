@@ -42,7 +42,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="b">Pointer to the single-precision complex matrix B.</param>
     /// <param name="ldb">Pointer to the leading dimension of matrix B.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cgemt")]
-    internal static extern int Cgemt(sbyte* trans, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb);
+    internal static extern int Cgemt(sbyte* trans, int* m, int* n, ComplexFloat* alpha, ComplexFloat* a, int* lda, ComplexFloat* b, int* ldb);
 
     /// <summary>
     /// Perform the operation C = alpha * A * B + beta * C for double-precision complex matrices.
@@ -56,5 +56,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="b">Pointer to the double-precision complex matrix B.</param>
     /// <param name="ldb">Pointer to the leading dimension of matrix B.</param>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zgemt")]
-    internal static extern int Zgemt(sbyte* trans, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb);
+    internal static extern int Zgemt(sbyte* trans, int* m, int* n, ComplexDouble* alpha, ComplexDouble* a, int* lda, ComplexDouble* b, int* ldb);
 }

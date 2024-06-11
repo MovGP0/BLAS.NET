@@ -45,7 +45,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="info">Pointer to the output information. If info = 0, the execution is successful. If info &gt; 0, the matrix A is singular.</param>
     /// <returns>Returns 0 if the execution is successful, or a positive integer if the matrix A is singular.</returns>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cgesv")]
-    internal static extern int Cgesv(int* n, int* nrhs, float* a, int* lda, int* ipiv, float* b, int* ldb, int* info);
+    internal static extern int Cgesv(int* n, int* nrhs, ComplexFloat* a, int* lda, int* ipiv, ComplexFloat* b, int* ldb, int* info);
 
     /// <summary>
     /// Solves a system of linear equations A * X = B with a double-precision complex matrix A and multiple right-hand sides B.
@@ -60,5 +60,5 @@ internal static unsafe partial class OpenBlas
     /// <param name="info">Pointer to the output information. If info = 0, the execution is successful. If info &gt; 0, the matrix A is singular.</param>
     /// <returns>Returns 0 if the execution is successful, or a positive integer if the matrix A is singular.</returns>
     [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zgesv")]
-    internal static extern int Zgesv(int* n, int* nrhs, double* a, int* lda, int* ipiv, double* b, int* ldb, int* info);
+    internal static extern int Zgesv(int* n, int* nrhs, ComplexDouble* a, int* lda, int* ipiv, ComplexDouble* b, int* ldb, int* info);
 }
