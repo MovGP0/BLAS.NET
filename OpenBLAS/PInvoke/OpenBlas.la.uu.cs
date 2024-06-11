@@ -11,7 +11,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="lda">Pointer to the leading dimension of the matrix A.</param>
     /// <param name="info">Pointer to the status code of the operation.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "slauu2_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "slauu2")]
     internal static extern int Slauu2(sbyte* uplo, int* n, float* a, int* lda, int* info);
 
     /// <summary>
@@ -23,7 +23,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="lda">Pointer to the leading dimension of the matrix A.</param>
     /// <param name="info">Pointer to the status code of the operation.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dlauu2_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dlauu2")]
     internal static extern int Dlauu2(sbyte* uplo, int* n, double* a, int* lda, int* info);
 
     /// <summary>
@@ -35,7 +35,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="lda">Pointer to the leading dimension of the matrix A.</param>
     /// <param name="info">Pointer to the status code of the operation.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "clauu2_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "clauu2")]
     internal static extern int Clauu2(sbyte* uplo, int* n, float* a, int* lda, int* info);
 
     /// <summary>
@@ -47,7 +47,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="lda">Pointer to the leading dimension of the matrix A.</param>
     /// <param name="info">Pointer to the status code of the operation.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zlauu2_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zlauu2")]
     internal static extern int Zlauu2(sbyte* uplo, int* n, double* a, int* lda, int* info);
 
     /// <summary>
@@ -59,7 +59,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="lda">Pointer to the leading dimension of the matrix A.</param>
     /// <param name="info">Pointer to the status code of the operation.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "slauum_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "slauum")]
     internal static extern int Slauum(sbyte* uplo, int* n, float* a, int* lda, int* info);
 
     /// <summary>
@@ -71,7 +71,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="lda">Pointer to the leading dimension of the matrix A.</param>
     /// <param name="info">Pointer to the status code of the operation.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dlauum_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dlauum")]
     internal static extern int Dlauum(sbyte* uplo, int* n, double* a, int* lda, int* info);
 
     /// <summary>
@@ -83,7 +83,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="lda">Pointer to the leading dimension of the matrix A.</param>
     /// <param name="info">Pointer to the status code of the operation.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "clauum_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "clauum")]
     internal static extern int Clauum(sbyte* uplo, int* n, float* a, int* lda, int* info);
 
     /// <summary>
@@ -95,6 +95,6 @@ internal static unsafe partial class OpenBlas
     /// <param name="lda">Pointer to the leading dimension of the matrix A.</param>
     /// <param name="info">Pointer to the status code of the operation.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zlauum_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zlauum")]
     internal static extern int Zlauum(sbyte* uplo, int* n, double* a, int* lda, int* info);
 }

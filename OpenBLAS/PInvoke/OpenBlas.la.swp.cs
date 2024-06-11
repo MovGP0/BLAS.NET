@@ -14,7 +14,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="ipiv">Pointer to the array of pivot indices.</param>
     /// <param name="incX">Pointer to the increment between successive values of ipiv.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "slaswp_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "slaswp")]
     internal static extern int S_la_swp(int* n, float* a, int* lda, int* k1, int* k2, int* ipiv, int* incX);
 
     /// <summary>
@@ -28,7 +28,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="ipiv">Pointer to the array of pivot indices.</param>
     /// <param name="incX">Pointer to the increment between successive values of ipiv.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dlaswp_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dlaswp")]
     internal static extern int D_la_swp(int* n, double* a, int* lda, int* k1, int* k2, int* ipiv, int* incX);
 
     /// <summary>
@@ -42,7 +42,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="ipiv">Pointer to the array of pivot indices.</param>
     /// <param name="incX">Pointer to the increment between successive values of ipiv.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "claswp_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "claswp")]
     internal static extern int C_la_swp(int* n, float* a, int* lda, int* k1, int* k2, int* ipiv, int* incX);
 
     /// <summary>
@@ -56,6 +56,6 @@ internal static unsafe partial class OpenBlas
     /// <param name="ipiv">Pointer to the array of pivot indices.</param>
     /// <param name="incX">Pointer to the increment between successive values of ipiv.</param>
     /// <returns>Status code of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zlaswp_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "zlaswp")]
     internal static extern int Z_la_swp(int* n, double* a, int* lda, int* k1, int* k2, int* ipiv, int* incX);
 }

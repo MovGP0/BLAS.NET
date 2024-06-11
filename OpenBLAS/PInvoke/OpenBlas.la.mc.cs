@@ -7,7 +7,7 @@ internal static unsafe partial class OpenBlas
     /// </summary>
     /// <param name="param">Pointer to the character specifying the parameter to be returned.</param>
     /// <returns>The value of the specified single-precision floating-point parameter.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "slamch_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "slamch")]
     internal static extern float Slamch(sbyte* param);
 
     /// <summary>
@@ -15,7 +15,7 @@ internal static unsafe partial class OpenBlas
     /// </summary>
     /// <param name="param">Pointer to the character specifying the parameter to be returned.</param>
     /// <returns>The value of the specified double-precision floating-point parameter.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dlamch_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dlamch")]
     internal static extern double Dlamch(sbyte* param);
 
     /// <summary>
@@ -24,7 +24,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="a">Pointer to the first single-precision floating-point number.</param>
     /// <param name="b">Pointer to the second single-precision floating-point number.</param>
     /// <returns>The sum of the two single-precision floating-point numbers.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "slamc3_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "slamc3")]
     internal static extern float Slamc3(float* a, float* b);
 
     /// <summary>
@@ -33,6 +33,6 @@ internal static unsafe partial class OpenBlas
     /// <param name="a">Pointer to the first double-precision floating-point number.</param>
     /// <param name="b">Pointer to the second double-precision floating-point number.</param>
     /// <returns>The sum of the two double-precision floating-point numbers.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dlamc3_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dlamc3")]
     internal static extern double Dlamc3(double* a, double* b);
 }

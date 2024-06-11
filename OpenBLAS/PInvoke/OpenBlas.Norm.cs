@@ -11,7 +11,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the single-precision floating-point vector.</param>
     /// <param name="result">Pointer to the result (the norm) of the computation.</param>
     /// <returns>An integer indicating the status of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "snorm_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "snorm")]
     internal static extern int Snorm(sbyte* order, int* n, int* incX, float* x, int* result);
 
     /// <summary>
@@ -23,7 +23,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the double-precision floating-point vector.</param>
     /// <param name="result">Pointer to the result (the norm) of the computation.</param>
     /// <returns>An integer indicating the status of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dnorm_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dnorm")]
     internal static extern int Dnorm(sbyte* order, int* n, int* incX, double* x, int* result);
 
     /// <summary>
@@ -35,7 +35,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the single-precision complex vector.</param>
     /// <param name="result">Pointer to the result (the norm) of the computation.</param>
     /// <returns>An integer indicating the status of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cnorm_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "cnorm")]
     internal static extern int Cnorm(sbyte* order, int* n, int* incX, float* x, int* result);
 
     /// <summary>
@@ -47,6 +47,6 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the double-precision complex vector.</param>
     /// <param name="result">Pointer to the result (the norm) of the computation.</param>
     /// <returns>An integer indicating the status of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "znorm_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "znorm")]
     internal static extern int Znorm(sbyte* order, int* n, int* incX, double* x, int* result);
 }

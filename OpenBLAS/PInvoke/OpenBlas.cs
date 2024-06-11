@@ -15,7 +15,7 @@ internal static partial class OpenBlas
     /// <param name="info">Pointer to the error code (info).</param>
     /// <param name="srname_len">Length of the routine name string.</param>
     /// <returns>An integer indicating the status of the operation.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "xerbla_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "xerbla")]
     internal static extern int Xerbla(IntPtr srname, IntPtr info, int srname_len);
 
     /// <summary>

@@ -38,7 +38,7 @@ public struct ComplexFloat : IEquatable<ComplexFloat>
                && Imaginary == other.Imaginary;
     }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         if (obj is ComplexFloat complexFloat)
         {
@@ -52,6 +52,8 @@ public struct ComplexFloat : IEquatable<ComplexFloat>
     public static bool operator ==(ComplexFloat left, ComplexFloat right) => left.Equals(right);
 
     public static bool operator !=(ComplexFloat left, ComplexFloat right) => !(left == right);
+
+    public override string ToString() => $"{Real} + i{Imaginary}";
 
     #endregion
 }

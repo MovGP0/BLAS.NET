@@ -9,7 +9,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the single-precision vector.</param>
     /// <param name="incX">Pointer to the increment for the elements of the vector.</param>
     /// <returns>The sum of absolute values of elements in the vector.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "sasum_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "sasum")]
     internal static extern float Sasum(int* n, float* x, int* incX);
 
     /// <summary>
@@ -19,7 +19,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the double-precision vector.</param>
     /// <param name="incX">Pointer to the increment for the elements of the vector.</param>
     /// <returns>The sum of absolute values of elements in the vector.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dasum_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dasum")]
     internal static extern double Dasum(int* n, double* x, int* incX);
 
     /// <summary>
@@ -29,7 +29,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the single-precision complex vector.</param>
     /// <param name="incX">Pointer to the increment for the elements of the vector.</param>
     /// <returns>The sum of absolute values of elements in the vector.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "scasum_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "scasum")]
     internal static extern float Casum(int* n, ComplexFloat* x, int* incX);
 
     /// <summary>
@@ -39,6 +39,6 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the double-precision complex vector.</param>
     /// <param name="incX">Pointer to the increment for the elements of the vector.</param>
     /// <returns>The sum of absolute values of elements in the vector.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dzasum_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dzasum")]
     internal static extern double Zasum(int* n, ComplexDouble* x, int* incX);
 }

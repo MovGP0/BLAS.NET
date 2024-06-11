@@ -9,7 +9,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of single-precision floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The index of the minimum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "ismin_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "ismin")]
     internal static extern int Ismin(int* n, float* x, int* incX);
 
     /// <summary>
@@ -19,7 +19,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of double-precision floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The index of the minimum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "idmin_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "idmin")]
     internal static extern int Idmin(int* n, double* x, int* incX);
 
     /// <summary>
@@ -29,7 +29,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of single-precision complex floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The index of the minimum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "icmin_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "icmin")]
     internal static extern int Icmin(int* n, float* x, int* incX);
 
     /// <summary>
@@ -39,7 +39,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of double-precision complex floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The index of the minimum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "izmin_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "izmin")]
     internal static extern int Izmin(int* n, double* x, int* incX);
 
     /// <summary>
@@ -49,7 +49,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of single-precision floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The minimum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "smin_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "smin")]
     internal static extern float Smin(int* n, float* x, int* incX);
 
     /// <summary>
@@ -59,7 +59,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of double-precision floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The minimum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dmin_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dmin")]
     internal static extern double Dmin(int* n, double* x, int* incX);
 
     /// <summary>
@@ -69,7 +69,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of single-precision complex floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The minimum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "scmin_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "scmin")]
     internal static extern float Scmin(int* n, float* x, int* incX);
 
     /// <summary>
@@ -79,6 +79,6 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of double-precision complex floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The minimum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dzmin_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dzmin")]
     internal static extern double Dzmin(int* n, double* x, int* incX);
 }

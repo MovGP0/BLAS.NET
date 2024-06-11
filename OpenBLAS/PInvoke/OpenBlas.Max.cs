@@ -9,7 +9,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the single-precision float vector.</param>
     /// <param name="incX">Pointer to the increment for the elements of the vector.</param>
     /// <returns>The maximum value in the vector.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "ismax_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "ismax")]
     internal static extern int Ismax(int* n, float* x, int* incX);
 
     /// <summary>
@@ -19,7 +19,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the double-precision float vector.</param>
     /// <param name="incX">Pointer to the increment for the elements of the vector.</param>
     /// <returns>The maximum value in the vector.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "idmax_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "idmax")]
     internal static extern int Idmax(int* n, double* x, int* incX);
 
     /// <summary>
@@ -29,7 +29,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the single-precision complex vector.</param>
     /// <param name="incX">Pointer to the increment for the elements of the vector.</param>
     /// <returns>The maximum value in the vector.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "icmax_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "icmax")]
     internal static extern int Icmax(int* n, float* x, int* incX);
 
     /// <summary>
@@ -39,7 +39,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the double-precision complex vector.</param>
     /// <param name="incX">Pointer to the increment for the elements of the vector.</param>
     /// <returns>The maximum value in the vector.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "izmax_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "izmax")]
     internal static extern int Izmax(int* n, double* x, int* incX);
 
     /// <summary>
@@ -49,7 +49,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of single-precision floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The maximum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "smax_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "smax")]
     internal static extern float Smax(int* n, float* x, int* incX);
 
     /// <summary>
@@ -59,7 +59,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of double-precision floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The maximum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dmax_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dmax")]
     internal static extern double Dmax(int* n, double* x, int* incX);
 
     /// <summary>
@@ -69,7 +69,7 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of single-precision complex floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The maximum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "scmax_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "scmax")]
     internal static extern float Scmax(int* n, float* x, int* incX);
 
     /// <summary>
@@ -79,6 +79,6 @@ internal static unsafe partial class OpenBlas
     /// <param name="x">Pointer to the array of double-precision complex floating-point numbers.</param>
     /// <param name="incX">Pointer to the increment between elements of the array.</param>
     /// <returns>The maximum value in the array.</returns>
-    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dzmax_")]
+    [DllImport("libopenblas", CallingConvention = CallingConvention.Cdecl, EntryPoint = "dzmax")]
     internal static extern double Dzmax(int* n, double* x, int* incX);
 }
